@@ -1,0 +1,10 @@
+# Python bytecode
+__pycache__/
+*.pyc
+
+# Logs and temporary data
+vla_logs/
+temp_obs/
+
+# Test images (optional - keep if you want them in the repo)
+*png
