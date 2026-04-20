@@ -28,7 +28,7 @@ import omni.ui as ui
 from utils.camera import UnderwaterCameraManager, UnderwaterScene
 from utils.llm import VLAController
 from utils.asycn import AsyncAUVController
-from utils.prompt.dock import formatted_prompt
+from utils.prompt.task2 import formatted_prompt
 # Initialize Warp
 def get_single_random_auv_pos():
     """
@@ -57,7 +57,7 @@ class OceanSceneCfg(InteractiveSceneCfg):
     ocean_floor = AssetBaseCfg(
         prim_path="/World/OceanFloor",
         spawn=sim_utils.UsdFileCfg(
-            usd_path="/home/huohua/IsaacLab/ocean/final_floor/updock2.usd",
+            usd_path="/home/huohua/IsaacLab/ocean/final_floor/fordock.usd",
             scale=(1.0, 1.0, 1.0),
             collision_props=sim_utils.CollisionPropertiesCfg(), # Collision
 
