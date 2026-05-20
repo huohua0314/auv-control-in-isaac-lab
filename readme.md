@@ -58,9 +58,6 @@ python run.py --mode vla --enable_cameras
 
 Here is the complete content formatted specifically to be saved as a Markdown file (e.g., `README_RL.md`).
 
-这里是为你重新整合、更加完整的强化学习（RL）部分 Markdown 文本。它从环境切换、资源下载、路径配置一直到训练与测试，提供了一条龙的完整步骤说明：
-
-```markdown
 ### 🏋️ Reinforcement Learning (RL) Workflow
 
 Follow these steps to configure, train, and evaluate the ROV using Proximal Policy Optimization (PPO) via the `skrl` framework.
@@ -122,7 +119,7 @@ python evaluate.py --task Isaac-ROV-Docking-Direct-v0 --checkpoint runs/ROV_Dock
 > [!TIP]
 > The evaluation script automatically switches the agent to test mode (`agent.set_running_mode("test")`). This turns off stochastic Gaussian exploration, forcing the ROV to execute purely deterministic, optimized actions based on your learned weights.
 
-```
+
 
 
 ```
