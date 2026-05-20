@@ -56,7 +56,7 @@ python run.py --mode vla --enable_cameras
 > You need to modify the YAML file first to set the required runtime parameters.
 
 
-Here is the complete content formatted specifically to be saved as a Markdown file (e.g., `README_RL.md`).
+
 
 ### 🏋️ Reinforcement Learning (RL) Workflow
 
@@ -80,13 +80,10 @@ Before starting any training or evaluation, you must update the asset paths in `
 
 ```yaml
 paths:
-  sea_floor_usd: "/home/YOUR_USERNAME/OceanGym2isaac/final_floor/floor_collison.usd"
-  robot_usd: "/home/YOUR_USERNAME/OceanGym2isaac/isaac_rl/usd/BlueROV1.usd"
+  sea_floor_usd: "absolute path of floor_collison.usd" (located in the `final_floor/` folder)
+  robot_usd: "absolute path of BlueROV1.usd" (located in the `usd/` folder)
 
 ```
-
-> [!IMPORTANT]
-> Always use **absolute paths** instead of relative paths to prevent Isaac Lab from throwing file-not-found errors during parallel environment cloning.
 
 #### 4. Policy Training
 
@@ -101,11 +98,6 @@ python train.py --task Isaac-ROV-Docking-Direct-v0 --num_envs 64 --headless
 * **Monitoring:** Training logs, tensorboard telemetry, and model checkpoints will be stored under the `runs/` directory. Monitor the training progress by running:
 ```bash
 tensorboard --logdir runs
-
-
-```
-
-
 
 ```
 
