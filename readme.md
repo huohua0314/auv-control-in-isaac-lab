@@ -17,8 +17,7 @@ To ensure the simulation runs correctly with GPU acceleration, you must first in
 
 ### Step 2: Download Oceangym_Isaac.zip
 From 
-  ☁️ <a href="https://drive.google.com/file/d/1EfKHeiyQD5eoJ6-EsiJHuIdBRM5Ope5A/view?usp=drive_link" target="_blank">Google Drive</a>
-  ☁️ <a href="https://pan.baidu.com/s/16h86huHLeFGAKatRWvLrFQ?pwd=wput" target="_blank">Baidu Drive</a>
+  ☁️ <a href="https://pan.baidu.com/s/10v0-xp6Nl0JULfi5ydILiQ?pwd=wmq9" target="_blank">Baidu Drive</a>
   download the **OceanGym_Isaac.zip** And extract it to the folder you want
 
 ### Step 3: Quick Start
@@ -71,8 +70,8 @@ cd OceanGym2isaac/isaac_rl
 
 #### 2. Download and Place Assets (USD)
 
-1. Download the **asset.zip** package from ☁️ Baidu Drive.
-2. Extract the contents. Ensure the `usd/` folder and its underlying files (`BlueROV1.usd`, `BlueROV.usd`, etc.) are placed under your root or corresponding project path as shown in the project structure.
+1. Download the **asset.zip** package from ☁️ <a href="https://pan.baidu.com/s/10v0-xp6Nl0JULfi5ydILiQ?pwd=wmq9" target="_blank">Baidu Drive</a>\.
+2. Extract the contents to where you want.
 
 #### 3. Path Configuration (`config.yaml`)
 
@@ -108,12 +107,5 @@ python evaluate.py --task Isaac-ROV-Docking-Direct-v0 --checkpoint runs/ROV_Dock
 
 ```
 
-> [!TIP]
-> The evaluation script automatically switches the agent to test mode (`agent.set_running_mode("test")`). This turns off stochastic Gaussian exploration, forcing the ROV to execute purely deterministic, optimized actions based on your learned weights.
 
 
-
-
-```
-
-```
