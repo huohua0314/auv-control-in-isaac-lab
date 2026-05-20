@@ -58,24 +58,26 @@ python run.py --mode vla --enable_cameras
 
 Here is the complete content formatted specifically to be saved as a Markdown file (e.g., `README_RL.md`).
 
+这里是为你重新整合、更加完整的强化学习（RL）部分 Markdown 文本。它从环境切换、资源下载、路径配置一直到训练与测试，提供了一条龙的完整步骤说明：
+
 ```markdown
-# 🏋️ Reinforcement Learning (RL) Workflow
+### 🏋️ Reinforcement Learning (RL) Workflow
 
 Follow these steps to configure, train, and evaluate the ROV using Proximal Policy Optimization (PPO) via the `skrl` framework.
 
-## 1. Navigate to the Task Directory
+#### 1. Navigate to the Task Directory
 First, ensure you are inside the reinforcement learning environment directory:
 ```bash
 cd OceanGym2isaac/isaac_rl
 
 ```
 
-## 2. Download and Place Assets (USD)
+#### 2. Download and Place Assets (USD)
 
 1. Download the **asset.zip** package from ☁️ Baidu Drive.
-2. Extract the contents. Ensure the `usd/` folder and its underlying files (`BlueROV1.usd`, `BlueROV.usd`, etc.) are placed under your project path as indicated by your repository structure.
+2. Extract the contents. Ensure the `usd/` folder and its underlying files (`BlueROV1.usd`, `BlueROV.usd`, etc.) are placed under your root or corresponding project path as shown in the project structure.
 
-## 3. Path Configuration (`config.yaml`)
+#### 3. Path Configuration (`config.yaml`)
 
 Before starting any training or evaluation, you must update the asset paths in `config.yaml` to match your local absolute paths. Open `config.yaml` and modify the following fields:
 
@@ -89,7 +91,7 @@ paths:
 > [!IMPORTANT]
 > Always use **absolute paths** instead of relative paths to prevent Isaac Lab from throwing file-not-found errors during parallel environment cloning.
 
-## 4. Policy Training
+#### 4. Policy Training
 
 To launch parallel training across multiple environments using PPO:
 
@@ -99,7 +101,7 @@ python train.py --task Isaac-ROV-Docking-Direct-v0 --num_envs 64 --headless
 ```
 
 * **Visualization:** Remove the `--headless` flag if you want to bring up the Isaac Sim GUI and watch the ROV learn in real-time.
-* **Monitoring:** Training logs, TensorBoard telemetry, and model checkpoints will be stored under the `runs/` directory. Monitor the training progress by running:
+* **Monitoring:** Training logs, tensorboard telemetry, and model checkpoints will be stored under the `runs/` directory. Monitor the training progress by running:
 ```bash
 tensorboard --logdir runs
 
@@ -110,7 +112,7 @@ tensorboard --logdir runs
 
 ```
 
-## 5. Policy Evaluation & Testing
+#### 5. Policy Evaluation & Testing
 To test and visualize your trained model checkpoint (e.g., the saved `best_agent.pt` file):
 ```bash
 python evaluate.py --task Isaac-ROV-Docking-Direct-v0 --checkpoint runs/ROV_Docking_Train/checkpoints/best_agent.pt --num_envs 1
@@ -122,5 +124,7 @@ python evaluate.py --task Isaac-ROV-Docking-Direct-v0 --checkpoint runs/ROV_Dock
 
 ```
 
+
+```
 
 ```
